@@ -16,6 +16,8 @@ pipelines:
                     arguments:
                       - gotham-todo
                 - exec:
+                    command: ls
+                - exec:
                     command: bash
                     arguments:
                       - ./apply-infrastructure.sh
