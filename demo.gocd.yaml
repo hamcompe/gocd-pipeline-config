@@ -12,8 +12,14 @@ pipelines:
             list:
               tasks:
                 - exec:
-                    command: ./apply-infrastructure.sh
+                    command: bash
+                    arguments:
+                      - ./apply-infrastructure.sh
                 - exec:
-                    command: ./build.sh
+                    command: bash
+                    arguments:
+                      - ./build.sh
                 - exec:
-                    command: ./copy-static-files.sh
+                    command: bash
+                    arguments:
+                      - ./copy-static-files.sh
